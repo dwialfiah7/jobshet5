@@ -18,7 +18,9 @@ return new class extends Migration
             $table->enum('jenis_kelamin', ['L', 'P']); 
             $table->string('tempat_lahir', 60);
             $table->date('tanggal_lahir');
+            $table->unsignedBigInteger('id_kelas');
             $table->foreign('id_kelas')->references('id')->on('kelas');
+            $table->unsignedBigInteger('id_wali');
             $table->foreign('id_wali')->references('id')->on('wali_murid');
             $table->timestamps();
         });
