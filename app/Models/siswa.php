@@ -9,6 +9,8 @@ class Siswa extends Model
 {
     protected $table = 'siswa';
 
+    public $timestamps = false;
+
     public function kelas()
     {
         return $this->belongsTo(Kelas::class, 'id_kelas');

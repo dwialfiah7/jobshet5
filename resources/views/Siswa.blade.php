@@ -8,6 +8,11 @@
 <body>
 <div class="container mt-4">
     <h2 class="mb-3">Data Siswa</h2>
+    @if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
     <div class="d-flex mb-3">
         <a href="{{ url('kelas') }}" class="btn btn-primary">Kelola Kelas</a>
         <a href="{{ url('wali_murid') }}" class="btn btn-primary ms-1">Kelola Wali Murid</a>
